@@ -1,0 +1,69 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // background: rgba(27, 61, 27, 0.6);
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease, padding 0.3s ease;
+  z-index: 10;
+
+  &.scrolled {
+    background: rgba(27, 61, 27, 0.85);
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+
+  .logo {
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  }
+
+  .nav {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      color: #fff;
+      font-weight: 500;
+      text-transform: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #a8874a;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .header-fireflies {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    pointer-events: none;
+
+    .dot {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 50%;
+      animation: blink 3s infinite ease-in-out;
+    }
+
+    .dot1 { animation-delay: 0s; top: 0; left: 0; }
+    .dot2 { animation-delay: 1s; top: 10px; left: 10px; }
+    .dot3 { animation-delay: 2s; top: 5px; left: 20px; }
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
