@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
 import treeAnimation from "../../assets/tree.json"; // Tree Lottie JSON
 import leafAnimation from "../../assets/leaf_falling.json"; // Leaf falling Lottie JSON
-import logo from '../../assets/logo.png'; // Logo image
+import logo from "../../assets/logo.png"; // Logo image
 import "./Home.scss";
 
 const Home = () => {
@@ -21,12 +21,10 @@ const Home = () => {
       <h1 className="home-title">
         Welcome to <span>Ullattil</span>
       </h1>
-
-      <img
-        src={logo}
-        alt="Ullattil Logo"
-        className="home-logo"
-      />
+      <div className="home-page-footer">
+        <div>By <a href="http://anilsnair.com" target="blank" className="my-link">Anil</a></div>
+        <img src={logo} alt="Ullattil Logo" className="home-logo" />
+      </div>
     </div>
   );
 };
